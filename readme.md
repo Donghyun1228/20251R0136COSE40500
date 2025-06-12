@@ -68,6 +68,22 @@ Q5 Possible Enhancements (at least three items)
 채점 설명:
 위에서 언급했든 다양한 domain에 대해 일반화하기 위한 실험이 부족하다. 이를 보완한다면 significance를 향상시킬 수 있을 것이다. 더 확장하여 실제 검색 시스템에서 적용 후 효과를 검증한다면 더욱더 확실하게 논문의 method의 효과를 입증할 수 있을 것이다. 또 재구현을 위한 code를 github에 publish한다면 clarity를 높일 수 있으며 후속 연구가 원활할 것이다.
 ## 5주차
+Q2 Summary (1 paragraph)
+1 점
+채점 설명:
+해당 논문에서는 InstructionBLIP 모델을 제안했다. InstructionBLIP은 vision, language task를 하나의 모델로 처리할 수 있는 모델이다. 기존의 BLIP-2를 backbone으로 사용했으며 instruction-aware Q-former를 도입하여 task에 적합한 vision feature를 추출할 수 있었다. 11가지의 task에 대해 벤치마크를 진행한 결과 기존 모델의 성능을 크게 상회했고 학습 데이터에 없는 task에 대해서도 훌륭한 zero-shot 성능을 보였다.
+Q3 Strengths (at least three items)
+1 점
+채점 설명:
+해당 모델의 강점으로는 성능 자체가 꼽힐 수 있다. 상당히 많은 부분에 대해서 평가를 진행했고 SOTA를 달성할 수 있었다. 따라서 해당 논문의 significance가 뛰어나다고 할 수 있다. 또 method의 originality가 뛰어나다. 기존의 모델들과 다르게 instructBLIP은 q-former를 이용하여 task에 따라 적합한 feature를 추출한다. 이는 해당 논문에서 제시한 새로운 방법이다. 마지막으로 해당 모델 구조의 성능을 잘 구성된 벤치마크로 효율적으로 입증했다. 무려 26개 부분에서 평가를 진행하였다.
+Q4 Weaknesses (at least three items)
+1 점
+채점 설명:
+해당 모델은 기본적으로 BLIP-2를 파인튜닝한 것에 불과하여 모델 구조가 거의 유사하다. 따라서 originality가 크지 않다. quality 측면에서는 reasoning task에 대한 측정 결과가 없어 해당 분야에서의 성능을 검증하지 못했다. 마지막으로 clarity 측면에서 instruction 템플릿이 일부만 나와있으며 명확한 기준을 알 수 없다.
+Q5 Possible Enhancements (at least three items)
+1 점
+채점 설명:
+모델을 개선하기 위해서 instruction을 더 다양하게 도입할 수 있다. instruction을 기반으로 feature를 추출하도록 설계된 모델이기 때문에 다양한 instruction의 영향을 많이 받을 것이다. 또 video QA task에서 단순 프레임 concat이 아니라 temporal 정보를 포함하면 더 개선이 될 수 있을 것이다. 마지막으로 LLM에 대한 full finetuning이 진행된다면 더 좋은 결과가 나올 수 있을 것이다.
 ## 6주차
 ## 7주차
 
