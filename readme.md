@@ -51,6 +51,22 @@ Q5 Possible Enhancements (at least three items)
 채점 설명:
 해당 방법은 한 사람에 대한 짧은 비디오만 가지고 작동할 수 있다. 하지만 여러 인물이 등장하고 카메라의 움직임이 동적인 경우에도 잘 작동할 수 있도록 한다면 더욱 범용적으로 사용할 수 있을 것이다. 또 실험에서 사용된 각종 hyperparamet와 세부적인 방법들에 대한 ablation study가 부족한데 이에 대해 보완한다면 clarity가 증가할 수 있을 것이다. 마지막으로 얼굴 표정이나 손 포즈에 대한 정보가 외부의 regressor를 사용하고 있는데 이 때문에 오차가 누적될 수 있어 파이프라인에 이 과정을 통합하면 도움이 될 것이다.
 ## 4주차
+Q2 Summary (1 paragraph)
+1 점
+채점 설명:
+이 논문에서는 집중한 문제는 기존의 query 생성 방식이 논문 검색 시 문서 내의 개념을 포괄하지 못하는 것이다. 이를 해결하기 위해 CCQGen 프레임워크를 제안한다. CCQGen은 이전에 생성된 query에서 다루지 않은 개념을 찾고 이를 다음 query 생성의 조건으로 사용한다. 이러한 프레임워크의 파이프라인은 개념 추출과 확장, query 생성, concept filtering으로 구성된다. 이러한 방법으로 CCQGen은 CSFCube와 DORIS-MAE에서 기존의 method를 능가하는 성능을 보였으며 query 에서의 중복을 감소시켰고 다양성 측면에서도 향상을 이루어 냈다.
+Q3 Strengths (at least three items)
+1 점
+채점 설명:
+독창성 측면에서 해당 논문은 기존 LLM 기반 query 생성의 한계를 명확하게 인식했고 이를 보완하는 새로운 방식의 CCQGen을 제안했다. 또 Quality 측면에서 봤을 때 문서의 핵심 개념을 식별하고 제대로 인식되지 않은 개념을 이용해 새로운 query를 생성하는 과정을 체계적으로 설계했으며 CSR 과 같은 보조 기술을 적용하고 retreival model 두 가지를 사용하여 해당 방법의 유효성을 효과적으로 입증했다. 마지막으로 clarity 측면에서 table과 figure를 적절히 사용하여 pipeline에 대한 이해를 도왔으며 query에 대한 구체적인 예시를 들어 직관적으로 이해할 수 있도록 했다.
+Q4 Weaknesses (at least three items)
+1 점
+채점 설명:
+해당 논문은 기존에 제시되지 않은 새로운 방법을 제시했지만 아이디어를 봤을 때는 다뤄지지 않은 개념에 대해서 보완한다는 상식적인 내용에 그친다. 따라서 이러한 측면에서는 originality에 있어 약점을 보인다. 또 significance 측면에서는 다양한 domain에서의 실험이 부족하다. 논문에서는 과학, 영어 등등에서는 잘 된다는 것을 입증했지만 다른 도메인에서의 범용성에 관한 내용은 포함되어 있지 않다. 마지막으로 clarity 측면에서 concept coverage에 관한 공식 등이 추상적으로 작성되어 있다. 이 때문에 논문 재구현에 어려움을 겪을 수 있으며 이를 보완하기 위한 코드 또한 존재하지 않는다.
+Q5 Possible Enhancements (at least three items)
+1 점
+채점 설명:
+위에서 언급했든 다양한 domain에 대해 일반화하기 위한 실험이 부족하다. 이를 보완한다면 significance를 향상시킬 수 있을 것이다. 더 확장하여 실제 검색 시스템에서 적용 후 효과를 검증한다면 더욱더 확실하게 논문의 method의 효과를 입증할 수 있을 것이다. 또 재구현을 위한 code를 github에 publish한다면 clarity를 높일 수 있으며 후속 연구가 원활할 것이다.
 ## 5주차
 ## 6주차
 ## 7주차
